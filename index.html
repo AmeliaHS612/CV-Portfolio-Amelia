@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amelia Herlina — Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="cv-scroll.css">
+  <link rel="stylesheet" href="portfolio.css">
+  <link rel="stylesheet" href="architecture-scene.css">
+  <link rel="stylesheet" href="architecture-scene.css">
+  <script src="lamp.js" defer></script>
+  <script src="i18n.js" defer></script>
+  <Script src="script.js" defer></Script>
+  <script src="cv-scroll.js" defer></script>
+  <script src="cv-snap.js" defer></script>
+  <script src="data/content-preview.js" defer></script>
+  <script src="data/content-preview.js" defer></script>
+  <script src="content.js" defer></script>
+  <script src="portfolio.js" defer></script>
+  <script src="architecture-scene.js" defer></script>
+  <script src="architecture-scene.js" defer></script>
+</head>
+
+<body class="cv-scroll-experiment">
+  <script>
+    // Restore the theme before page content is displayed.
+    (() => {
+      let savedTheme;
+      try {
+        savedTheme = localStorage.getItem("portfolio-theme");
+      } catch {
+        // Use the system preference when browser storage is unavailable.
+      }
+      const isDark = savedTheme === "dark" ||
+        (savedTheme !== "light" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+      document.body.classList.toggle("dark-theme", isDark);
+    })();
+  </script>
+  <div class="cv-scroll-frost" aria-hidden="true"></div>
+  <!-- Global theme control: stays available while scrolling through every section. -->
+  <button class="theme-lamp" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+    <span class="lamp-cord"></span>
+    <span class="lamp-shade"></span>
+    <span class="lamp-bulb"></span>
+  </button>
+  <div class="home-page" id="home">
+  <div class="architecture-scene" aria-hidden="true">
+    <svg viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false">
+      <g stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+        <path class="scene-ground" pathLength="1" d="M35 440H565"/>
+        <g class="scene-tree scene-tree-left">
+          <path d="M104 440V397M104 414L93 405M104 407L115 397"/>
+          <path d="M82 405C64 405 63 383 75 376C68 359 82 346 96 350C103 333 128 340 129 355C146 354 153 374 143 384C154 400 134 414 121 406C115 415 91 417 82 405Z"/>
+        </g>
+        <g class="scene-tree scene-tree-right">
+          <path d="M491 440V400M491 416L481 407M491 410L502 401"/>
+          <path d="M473 410C456 410 451 391 462 382C453 370 462 353 477 355C484 337 509 341 513 357C532 356 540 376 529 388C538 405 519 418 505 410C497 419 481 419 473 410Z"/>
+        </g>
+        <g class="scene-floor" style="--floor:0">
+          <path d="M200 440V390H400V440M194 390H406M200 394H400"/>
+          <path d="M215 440V398H224V440M376 440V398H385V440M272 440V402H328V440M300 402V440M234 405H257V426H234ZM343 405H366V426H343Z"/>
+          <path d="M292 421V425M308 421V425"/>
+        </g>
+        <g class="scene-floor" style="--floor:1">
+          <path d="M200 390V340H400V390M194 340H406M200 344H400"/>
+          <path d="M216 355H246V377H216ZM265 355H295V377H265ZM314 355H344V377H314ZM363 355H384V377H363ZM231 355V377M280 355V377M329 355V377"/>
+        </g>
+        <g class="scene-floor" style="--floor:2">
+          <path d="M200 340V290H400V340M194 290H406M200 294H400"/>
+          <path d="M216 305H246V327H216ZM265 305H295V327H265ZM314 305H344V327H314ZM363 305H384V327H363ZM231 305V327M280 305V327M329 305V327"/>
+        </g>
+        <g class="scene-floor" style="--floor:3">
+          <path d="M200 290V240H400V290M194 240H406M200 244H400"/>
+          <path d="M216 255H246V277H216ZM265 255H295V277H265ZM314 255H344V277H314ZM363 255H384V277H363ZM231 255V277M280 255V277M329 255V277"/>
+        </g>
+        <g class="scene-floor" style="--floor:4">
+          <path d="M200 240V190H400V240M194 190H406M200 194H400"/>
+          <path d="M216 205H246V227H216ZM265 205H295V227H265ZM314 205H344V227H314ZM363 205H384V227H363ZM231 205V227M280 205V227M329 205V227"/>
+        </g>
+        <g class="scene-roof">
+          <path d="M187 190L300 134L413 190ZM203 184L300 142L397 184M300 150V173"/>
+        </g>
+        <g class="scene-cloud" style="--cloud:0">
+          <g class="scene-cloud-float">
+            <path d="M117 111C100 111 96 91 110 84C109 68 128 59 141 68C148 47 178 49 185 71C204 63 221 77 216 92C230 99 224 114 209 114H126C122 114 119 113 117 111Z"/>
+          </g>
+        </g>
+        <g class="scene-cloud" style="--cloud:1">
+          <g class="scene-cloud-float">
+            <path d="M346 75C330 75 326 57 340 51C338 37 357 27 368 37C378 18 405 23 409 43C426 37 441 50 437 62C452 67 447 81 432 81H358C353 81 349 79 346 75Z"/>
+          </g>
+        </g>
+        <g class="scene-cloud" style="--cloud:2">
+          <g class="scene-cloud-float">
+            <path d="M445 155C431 155 426 139 439 131C437 117 455 108 466 117C475 100 499 105 503 122C521 119 531 133 524 143C535 153 525 164 512 163H459C453 163 448 160 445 155Z"/>
+          </g>
+        </g>
+      </g>
+    </svg>
+  </div>
+  <div class="architecture-scene" aria-hidden="true">
+    <svg viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false">
+      <g stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+        <path class="scene-ground" pathLength="1" d="M35 440H565"/>
+        <g class="scene-tree scene-tree-left">
+          <path d="M104 440V397M104 414L93 405M104 407L115 397"/>
+          <path d="M82 405C64 405 63 383 75 376C68 359 82 346 96 350C103 333 128 340 129 355C146 354 153 374 143 384C154 400 134 414 121 406C115 415 91 417 82 405Z"/>
+        </g>
+        <g class="scene-tree scene-tree-right">
+          <path d="M491 440V400M491 416L481 407M491 410L502 401"/>
+          <path d="M473 410C456 410 451 391 462 382C453 370 462 353 477 355C484 337 509 341 513 357C532 356 540 376 529 388C538 405 519 418 505 410C497 419 481 419 473 410Z"/>
+        </g>
+        <g class="scene-floor" style="--floor:0">
+          <path d="M200 440V390H400V440M194 390H406M200 394H400"/>
+          <path d="M215 440V398H224V440M376 440V398H385V440M272 440V402H328V440M300 402V440M234 405H257V426H234ZM343 405H366V426H343Z"/>
+          <path d="M292 421V425M308 421V425"/>
+        </g>
+        <g class="scene-floor" style="--floor:1">
+          <path d="M200 390V340H400V390M194 340H406M200 344H400"/>
+          <path d="M216 355H246V377H216ZM265 355H295V377H265ZM314 355H344V377H314ZM363 355H384V377H363ZM231 355V377M280 355V377M329 355V377"/>
+        </g>
+        <g class="scene-floor" style="--floor:2">
+          <path d="M200 340V290H400V340M194 290H406M200 294H400"/>
+          <path d="M216 305H246V327H216ZM265 305H295V327H265ZM314 305H344V327H314ZM363 305H384V327H363ZM231 305V327M280 305V327M329 305V327"/>
+        </g>
+        <g class="scene-floor" style="--floor:3">
+          <path d="M200 290V240H400V290M194 240H406M200 244H400"/>
+          <path d="M216 255H246V277H216ZM265 255H295V277H265ZM314 255H344V277H314ZM363 255H384V277H363ZM231 255V277M280 255V277M329 255V277"/>
+        </g>
+        <g class="scene-floor" style="--floor:4">
+          <path d="M200 240V190H400V240M194 190H406M200 194H400"/>
+          <path d="M216 205H246V227H216ZM265 205H295V227H265ZM314 205H344V227H314ZM363 205H384V227H363ZM231 205V227M280 205V227M329 205V227"/>
+        </g>
+        <g class="scene-roof">
+          <path d="M187 190L300 134L413 190ZM203 184L300 142L397 184M300 150V173"/>
+        </g>
+        <g class="scene-cloud" style="--cloud:0">
+          <g class="scene-cloud-float">
+            <path d="M117 111C100 111 96 91 110 84C109 68 128 59 141 68C148 47 178 49 185 71C204 63 221 77 216 92C230 99 224 114 209 114H126C122 114 119 113 117 111Z"/>
+          </g>
+        </g>
+        <g class="scene-cloud" style="--cloud:1">
+          <g class="scene-cloud-float">
+            <path d="M346 75C330 75 326 57 340 51C338 37 357 27 368 37C378 18 405 23 409 43C426 37 441 50 437 62C452 67 447 81 432 81H358C353 81 349 79 346 75Z"/>
+          </g>
+        </g>
+        <g class="scene-cloud" style="--cloud:2">
+          <g class="scene-cloud-float">
+            <path d="M445 155C431 155 426 139 439 131C437 117 455 108 466 117C475 100 499 105 503 122C521 119 531 133 524 143C535 153 525 164 512 163H459C453 163 448 160 445 155Z"/>
+          </g>
+        </g>
+      </g>
+    </svg>
+  </div>
+  <header class="home-top">
+    <a class="admin-link" href="admin.html" data-i18n="homeLabel" aria-label="Architecture / CV — admin login">ARCHITECTURE / CV</a>
+    <button class="language-toggle" type="button">
+      EN / 中文
+    </button>
+  </header>
+  <section class="home">
+  <div class="home-copy">
+  <p class="home-intro" data-i18n="homeIntro">Hello, I'm</p>
+  <h1><span data-i18n="heroNameFirst">AMELIA</span><br class="name-break"><span data-i18n="heroNameLast">HERLINA</span></h1>
+  <p class="home-role" data-i18n="homeRole">Architect &amp; Designer</p>
+  </div>
+  </section>
+  <button class="portfolio-button" type="button" aria-haspopup="dialog" aria-controls="portfolioPanel">
+    <span>PORTFOLIO</span>
+    <span class="portfolio-arrow" aria-hidden="true">→</span>
+  </button>
+  <footer class="home-bottom">
+    <a href="#cv" data-i18n="scrollCv">SCROLL FOR CV ↓</a>
+    <span class="year">2026</span>
+  </footer>
+
+  </div>
+
+  <!-- The admin editor saves CV and portfolio content in data/content.json.
+       This HTML remains a fallback if content cannot be loaded. -->
+  <section class="cv" id="cv" lang="en">
+    <header class="cv-heading">
+      <span class="cv-label">CURRICULUM VITAE</span>
+      <div class="cv-photo" role="img" aria-label="Profile photo placeholder"></div>
+    </header>
+    <div class="cv-content">
+      <!-- ABOUT: replace the paragraph with your introduction. -->
+      <section class="cv-block">
+        <h3>About Me</h3>
+        <p>Hello! My name is Amelia Herlina Susanto, an international student from Indonesia. I graduated from Tarumanagara University with a degree in Architecture. I am interested in sustainable design, urban architecture and historical architecture.</p>
+      </section>
+
+      <!-- EXPERIENCE: copy an entire article.cv-entry inside cv-timeline to add a role. -->
+      <section class="cv-block">
+        <h3>Experience</h3>
+        <div class="cv-timeline">
+          <article class="cv-entry">
+            <h4>MAKUKU HQ INDONESIA | 2021 - 2024 </h4>
+            <p class="cv-organization">Branding & POP Production Coordinator</p>
+            <!-- Add a new li for each job responsibility. -->
+            <ul class="cv-duties">
+              <li>Oversaw POP production, quality control, inventory allocation, and nationwide distribution.</li>
+              <li>Coordinated with vendors and regional branches from production to delivery.</li>
+            </ul>
+            <p class="cv-organization">Interior Designer & Drafter</p>
+            <ul class="cv-duties">
+              <li>Developed interior design concepts, layouts, and technical drawings.</li>
+            </ul>
+          </article>
+          <article class="cv-entry">
+            <h4>INTERNSHIP | 2019 (3 MONTHS) </h4>
+            <p class="cv-organization">Branding & POP Production Coordinator</p>
+            <!-- Add a new li for each job responsibility. -->
+            <ul class="cv-duties">
+              <li>Oversaw POP production, quality control, inventory allocation, and nationwide distribution.</li>
+              <li>Coordinated with vendors and regional branches from production to delivery.</li>
+            </ul>
+            <p class="cv-organization">Interior Designer & Drafter</p>
+            <ul class="cv-duties">
+              <li>Developed interior design concepts, layouts, and technical drawings.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- EDUCATION: copy an entire article.cv-entry inside cv-timeline to add a degree. -->
+      <section class="cv-block">
+        <h3>Education</h3>
+        <div class="cv-timeline">
+          <article class="cv-entry">
+            <h4>Master's in Architecture | 2025 - present</h4>
+            <p>National Taiwan University of Science and Technology</p>
+          </article>
+          <article class="cv-entry">
+            <h4>Bachelor's in Architecture | 2017 - 2022</h4>
+            <p>Tarumanagara University</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="cv-block">
+        <h3>Research Experience</h3>
+        <div class="cv-timeline">
+          <article class="cv-entry">
+            <h4>Undergraduate Thesis</h4>
+            <p class="cv-organization">Research Focus</p>
+            <ul class="cv-duties">
+              <li>Studied the relationship between human activity, nature, and the environment.</li>
+              <li>Used the COVID-19 period as a case to observe changes in human behavior and environmental conditions.</li>
+              <li>Examined how human actions affect the environment and how environmental quality affects people's daily life and well-being.</li>
+              <li>Developed a design that focuses on human-centered and environmentally responsive architecture.</li>
+            </ul>
+
+            <p class="cv-organization">Research Method</p>
+            <ul class="cv-duties">
+              <li>Concept development based on the idea of an oasis as a place of shelter and refuge.</li>
+              <li>Spatial experiments using light, shadow, and water to study atmosphere and perception.</li>
+              <li>Design exploration inspired by Lebbeus Woods' speculative approach to architecture.</li>
+            </ul>
+
+            <p class="cv-organization">Research Outcome</p>
+            <ul class="cv-duties">
+              <li>Designed an experimental learning and working space as an architectural proposal.</li>
+              <li>Developed mass composition inspired by water ripple patterns.</li>
+            </ul>
+          </article>
+          <article class="cv-entry">
+            <h4>Additional Design Experience</h4>
+            <p class="cv-organization">Professional Experience Interior Design and Graphic Design</p>
+            <ul class="cv-duties">
+              <li>Spatial planning and concept development, communication, basic technical drawing and rendering.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- SKILLS: edit the paragraph and separate skills with a middle dot (·). -->
+      <section class="cv-block">
+        <h3>Skills</h3>
+        <p class="cv-skills">Autodesk AutoCAD · SketchUp · V-Ray · Adobe Photoshop · Adobe Illustrator · Twinmotion · Microsoft Office</p>
+      </section>
+
+            <!-- CONTACT: replace this paragraph with your contact details. -->
+      <section class="cv-block">
+        <h3>Contact</h3>
+        <p class="cv-email">
+          <svg class="cv-email-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+            <path d="m3 6 9 7 9-7"></path>
+          </svg>
+          <a href="mailto:ameliaherlina612@gmail.com">ameliaherlina612@gmail.com</a>
+        </p>
+      </section>
+
+    </div>
+  </section>
+  <!-- PORTFOLIO: edit this panel's content to add your projects. -->
+  <dialog class="portfolio-panel" id="portfolioPanel" aria-label="Portfolio">
+    <div class="portfolio-panel-content">
+      <header class="portfolio-panel-header">
+        <button class="portfolio-close" type="button" autofocus>Close ×</button>
+      </header>
+      <!-- Add project cards inside each category when your projects are ready. -->
+      <div class="portfolio-categories project-gallery" id="projectGallery">
+        <section class="portfolio-category" aria-labelledby="architectureTitle">
+          <h3 id="architectureTitle">Architecture / Studio</h3>
+          <p>University studio projects developed as academic design explorations.</p>
+          <p class="portfolio-empty">Projects to be added.</p>
+        </section>
+
+      </div>
+      <button class="project-back" type="button" hidden>← ALL PROJECTS</button>
+      <div class="story-viewport" id="storyViewport" tabindex="0" aria-label="Project story. Use arrow keys to explore." hidden>
+        <div class="story-track" id="storyTrack"></div>
+      </div>
+      <footer class="sheet-bottom" hidden>
+        <span class="section-count" aria-live="polite"></span>
+        <nav class="story-nav" aria-label="Project sections"></nav>
+        <span class="explore-hint">SCROLL / DRAG TO EXPLORE</span>
+        <div class="story-arrows"><button type="button" aria-label="Previous section">←</button><button type="button" aria-label="Next section">→</button></div>
+      </footer>
+    </div>
+  </dialog>
+  <dialog class="image-lightbox" aria-label="Enlarged project image">
+    <div class="lightbox-frame"><img alt=""><button class="lightbox-close" type="button" aria-label="Close enlarged image">×</button><p class="lightbox-caption"></p></div>
+  </dialog>
+</body>
+</html>

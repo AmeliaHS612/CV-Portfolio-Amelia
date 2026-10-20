@@ -1,0 +1,7 @@
+/* Experimental hero-to-CV passage. Remove this file and its marked HTML to revert. */
+body.cv-scroll-experiment{--cv-frost-alpha:0;--cv-frost-blur:0px;--cv-entry-shift:24px;--cv-entry-blur:6px;--cv-entry-opacity:.74}
+.cv-scroll-frost{position:fixed;inset:0;z-index:3;pointer-events:none;background:rgba(247,247,247,var(--cv-frost-alpha));backdrop-filter:blur(var(--cv-frost-blur));-webkit-backdrop-filter:blur(var(--cv-frost-blur));will-change:backdrop-filter}
+body.cv-scroll-experiment.dark-theme .cv-scroll-frost{background:rgba(8,8,8,var(--cv-frost-alpha))}
+body.cv-scroll-experiment:not(.portfolio-active) .cv{opacity:var(--cv-entry-opacity);filter:blur(var(--cv-entry-blur));transform:translateY(var(--cv-entry-shift));will-change:opacity,filter,transform}
+body.portfolio-active .cv-scroll-frost{display:none}
+@media(prefers-reduced-motion:reduce){.cv-scroll-frost{display:none}body.cv-scroll-experiment:not(.portfolio-active) .cv{opacity:1;filter:none;transform:none;will-change:auto}}
